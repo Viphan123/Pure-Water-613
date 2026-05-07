@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PureWater613 | Ottawa Window Cleaning</title>
+  <meta name="description" content="PureWater613 provides reliable residential and commercial window cleaning services in Ottawa. Get clean, streak-free windows with a local professional team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0369a1;
+      --navy: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .top-bar {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.9rem;
+      padding: 10px 0;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--navy);
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), #67e8f9);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 24px rgba(14, 165, 233, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--navy);
+      border-color: var(--border);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 72px;
+      background:
+        linear-gradient(90deg, rgba(248,250,252,0.98) 0%, rgba(248,250,252,0.90) 48%, rgba(248,250,252,0.35) 100%),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80") center/cover;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.75rem);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 620px;
+      color: var(--text);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(226,232,240,0.9);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .quote-card h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .quote-card p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .quote-card form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 14px;
+      font: inherit;
+      background: white;
+      color: var(--navy);
+    }
+
+    textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 38px;
+    }
+
+    .section-header.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #e0f2fe;
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .image-card {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 420px;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #166534;
+      display: grid;
+      place-items: center;
+      flex: 0 0 24px;
+      font-size: 0.85rem;
+    }
+
+    .process {
+      background: var(--light);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: white;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .stars {
+      color: #f59e0b;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review-name {
+      margin-top: 16px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--navy), #075985);
+      color: white;
+      border-radius: 34px;
+      padding: 54px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #cbd5e1;
+      max-width: 680px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #cbd5e1;
+      padding: 54px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+
+    footer h3, footer h4 {
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    footer a, footer p {
+      color: #cbd5e1;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 22px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .split,
+      .cta,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .reviews-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .top-bar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 58px 0;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .services-grid,
+      .reviews-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <span>Ottawa residential & commercial window cleaning</span>
+      <span>Call/Text: <strong>(613) 000-0000</strong></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">
+        <span class="logo-mark">PW</span>
+        <span>PureWater613</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">Why Us</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a class="btn btn-primary" href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Streak-free window cleaning in Ottawa</span>
+          <h1>Crystal clear windows without the hassle.</h1>
+          <p>PureWater613 helps homeowners and local businesses keep their windows clean, bright, and professional with reliable service and easy quote requests.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Request a Free Quote</a>
+            <a class="btn btn-outline" href="tel:+16130000000">Call Now</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ Local Ottawa service</span>
+            <span>✓ Homes & businesses</span>
+            <span>✓ Interior & exterior</span>
+          </div>
+        </div>
+
+        <div class="hero-card quote-card" id="quote">
+          <h3>Get your free quote</h3>
+          <p>Tell us about your property and we’ll get back to you with pricing.</p>
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+            <input type="email" name="email" placeholder="Email address" />
+            <select name="property_type" required>
+              <option value="">Property type</option>
+              <option>Residential home</option>
+              <option>Condo / apartment</option>
+              <option>Commercial property</option>
+              <option>Other</option>
+            </select>
+            <textarea name="message" placeholder="Tell us what you need cleaned"></textarea>
+            <button class="btn btn-primary" type="submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Our services</span>
+          <h2>Window cleaning for every property.</h2>
+          <p>Simple, reliable service options for homeowners, storefronts, offices, and property managers.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="icon">🏠</div>
+            <h3>Residential Window Cleaning</h3>
+            <p>Interior and exterior window cleaning for houses, townhomes, condos, and rental properties.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🏢</div>
+            <h3>Commercial Window Cleaning</h3>
+            <p>Professional storefront and office window cleaning to help your business look clean and welcoming.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✨</div>
+            <h3>Screen & Sill Cleaning</h3>
+            <p>Optional screen, sill, and frame cleaning for a more complete refresh.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💧</div>
+            <h3>Pure Water Cleaning</h3>
+            <p>Modern cleaning methods designed to leave glass clear, bright, and streak-free.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌦️</div>
+            <h3>Seasonal Cleanings</h3>
+            <p>Spring, summer, and fall cleaning packages to keep your property looking its best.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📋</div>
+            <h3>Free Estimates</h3>
+            <p>Easy quote requests with clear communication before the job starts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1597001510639-6f04a7b15a67?auto=format&fit=crop&w=1000&q=80" alt="Clean modern home exterior with bright windows" />
+        </div>
+        <div>
+          <span class="eyebrow">Why choose PureWater613</span>
+          <h2>A brighter, cleaner look for your property.</h2>
+          <p>We focus on making the process simple: clear communication, reliable scheduling, and results that help your home or business look polished.</p>
+          <div class="check-list">
+            <div class="check-item"><span class="check">✓</span><span>Friendly local service in Ottawa and nearby areas</span></div>
+            <div class="check-item"><span class="check">✓</span><span>Residential and commercial appointments available</span></div>
+            <div class="check-item"><span class="check">✓</span><span>Simple quote requests by phone, text, or form</span></div>
+            <div class="check-item"><span class="check">✓</span><span>Great for seasonal refreshes, move-ins, and storefront upkeep</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">How it works</span>
+          <h2>Simple from quote to clean windows.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="card">
+            <div class="step-number">1</div>
+            <h3>Request a quote</h3>
+            <p>Send your details through the form or call/text us directly.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">2</div>
+            <h3>Get pricing</h3>
+            <p>We review your property type, window count, and service needs.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">3</div>
+            <h3>Book a time</h3>
+            <p>Choose a convenient appointment window that works for you.</p>
+          </article>
+          <article class="card">
+            <div class="step-number">4</div>
+            <h3>Enjoy the view</h3>
+            <p>Your windows are cleaned and your property looks brighter.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Reviews</span>
+          <h2>Trusted by local customers.</h2>
+          <p>Replace these with real Google reviews or client testimonials once available.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p>“Fast response, easy scheduling, and the windows looked amazing after.”</p>
+            <div class="review-name">Local Homeowner</div>
+          </article>
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p>“Professional service and great communication from start to finish.”</p>
+            <div class="review-name">Ottawa Business Owner</div>
+          </article>
+          <article class="card">
+            <div class="stars">★★★★★</div>
+            <p>“The house looked brighter right away. Would book again.”</p>
+            <div class="review-name">Residential Client</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Ready for cleaner windows?</h2>
+            <p>Request a free quote today and make your home or business look bright, clean, and cared for.</p>
+          </div>
+          <a class="btn btn-primary" href="#quote">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>PureWater613</h3>
+          <p>Residential and commercial window cleaning services in Ottawa.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+16130000000">(613) 000-0000</a>
+          <a href="mailto:hello@purewater613.ca">hello@purewater613.ca</a>
+        </div>
+        <div>
+          <h4>Service Area</h4>
+          <p>Ottawa</p>
+          <p>Kanata</p>
+          <p>Nepean</p>
+          <p>Orléans</p>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 PureWater613. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
